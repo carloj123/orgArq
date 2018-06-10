@@ -53,6 +53,7 @@ for entrada in entradas:
                     print(str(hex(indexAux)) + "  " + tagg[0][:14] + " | " + tagg[1] + tagg[2]+tagg[3]+tagg[4])
                 except Exception:
                     pass
+            indexAux += 1
 print("\n")
 print('CACHE FINAL')
 print("    tag            | dado")
@@ -66,7 +67,7 @@ print("\n\n"+"Quantidade total: "+str(288-hits)+" miss")
 print(str((288-hits)*100/288.0)[:5]+"%")
 
 print("\n\n\n############################################################################\n\n\n")
-
+exit()
 
 def pegaTag(objeto):
     index=0
@@ -116,6 +117,7 @@ for entrada in entradas:
                 print(str(hex(indexAux)) + "  " + tagg[0][:14] + " | " + tagg[1] + tagg[2])
             except Exception:
                 pass
+        indexAux += 1
 print("\n")
 print('CACHE FINAL')
 print("     tag            |  dado")
