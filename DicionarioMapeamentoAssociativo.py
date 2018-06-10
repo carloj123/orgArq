@@ -41,8 +41,20 @@ for entrada in entradas:
             index2+=1
             if index2>=tamanho_limite:
                 index2=0
-
-print('CACHE')
+        indexAux = 0
+        print("\n")
+        print("CACHE")
+        print("    tag            | dado")
+        for tagg in cache:
+            if len(str(hex(indexAux))) > 3:
+                print(str(hex(indexAux)) + " " + tagg[0][:14] + " | " + tagg[1] + tagg[2]+tagg[3]+tagg[4])
+            else:
+                try:
+                    print(str(hex(indexAux)) + "  " + tagg[0][:14] + " | " + tagg[1] + tagg[2]+tagg[3]+tagg[4])
+                except Exception:
+                    pass
+print("\n")
+print('CACHE FINAL')
 print("    tag            | dado")
 indexAux=0
 for tagg in cache:
@@ -92,8 +104,20 @@ for entrada in entradas:
             index2+=1
             if index2>=tamanho_limite:
                 index2=0
-
-print('CACHE')
+    indexAux = 0
+    print("\n")
+    print("CACHE")
+    print("     tag            |  dado")
+    for tagg in cache:
+        if len(str(hex(indexAux))) > 3:
+            print(str(hex(indexAux)) + " " + tagg[0][:14] + " | " + tagg[1] + tagg[2])
+        else:
+            try:
+                print(str(hex(indexAux)) + "  " + tagg[0][:14] + " | " + tagg[1] + tagg[2])
+            except Exception:
+                pass
+print("\n")
+print('CACHE FINAL')
 print("     tag            |  dado")
 indexAux=0
 for tagg in cache:
