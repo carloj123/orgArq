@@ -1,5 +1,4 @@
-def tohex(n):
-    return "%s" % ("0000%x" % (n & 0xffff))[-4:]
+
 
 def pegaTag(objeto):
     index=0
@@ -26,18 +25,18 @@ hits=0
 arq= open("Adresses3.txt",'r')
 entradas = arq.readlines()
 for entrada in entradas:
-    #print(entrada)
+
     if pegaTag(entrada)!=-1:
         hits+=1
-        #print(cache[pegaIndex(entrada)])
-        #print('hit'+"  | "+str(cache[pegaTag(entrada)].append(pegaIndex(entrada,cache[pegaTag(entrada)]))))
+
+
     else:
         if indexCache< tamanho_limite:
             cache[indexCache] = [entrada,"00 ","01 ","10 ","11"]
             indexCache+=1
-            # print("miss" +" | "+str(entrada))
+
         else:
-            # print("miss" + " | " + str(entrada))
+
             cache[index2]=[entrada,"00 ","01 ","10 ","11"]
             index2+=1
             if index2>=tamanho_limite:
@@ -56,15 +55,6 @@ print(str((288-hits)*100/288.0)[:5]+"%")
 
 print("\n\n\n############################################################################\n\n\n")
 
-#
-# def pegaIndex(objeto,list):
-#     index=0
-#     for i in list:
-#         if i == objeto:
-#             return index
-#         else:
-#             index+=1
-#     return -1
 
 def pegaTag(objeto):
     index=0
@@ -86,18 +76,18 @@ hits=0
 arq= open("Adresses3.txt",'r')
 entradas = arq.readlines()
 for entrada in entradas:
-    #print(entrada)
+
     if pegaTag(entrada)!=-1:
         hits+=1
-        #print(cache[pegaIndex(entrada)])
-        #print('hit'+"  | "+str(cache[pegaTag(entrada)].append(pegaIndex(entrada,cache[pegaTag(entrada)]))))
+
+
     else:
         if indexCache< tamanho_limite:
             cache[indexCache] = [entrada,"  0 ","1"]
             indexCache+=1
-            # print("miss" +" | "+str(entrada))
+
         else:
-            # print("miss" + " | " + str(entrada))
+
             cache[index2]=[entrada,"  0 ","1"]
             index2+=1
             if index2>=tamanho_limite:
